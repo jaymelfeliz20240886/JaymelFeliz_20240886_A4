@@ -255,34 +255,29 @@ end
 *(Inserta en esta sección las capturas de pantalla obtenidas durante la práctica)*:
 
 1. **Topología GNS3 con etiquetas de puertos activas:**  
-   `![Topología GNS3](evidencias/topologia_gns3.png)`
+  <img width="808" height="735" alt="imagen" src="https://github.com/user-attachments/assets/c5242453-2fd4-4945-8660-640b9545abdb" />
+
 2. **Ejecución del script `cis_hardening_tool.py` (Auditoría Inicial vs. Remediación):**  
-   `![Ejecución Script CIS](evidencias/ejecucion_script_cis.png)`
-3. **Verificación de Banner MOTD y acceso SSHv2:**  
-   `![Banner SSH](evidencias/banner_ssh.png)`
-4. **Prueba de salida a Internet (`ping google.com`) tras aplicar hardening:**  
-   `![Prueba Internet](evidencias/prueba_internet.png)`
+   INICIAL:
+   <img width="915" height="538" alt="imagen" src="https://github.com/user-attachments/assets/5a04b7af-7a02-427b-a907-31ad00da5f31" />
+   POSTUMO:
+   <img width="919" height="454" alt="imagen" src="https://github.com/user-attachments/assets/af05a821-cd5b-4ccb-9aec-ed592b708ae0" />
+   (los puse a mitad porque no cabe en el SC, archivos de las auditorias subidas al repositorio)
+4. **Verificación de Banner MOTD y acceso SSHv2:**  
+   FIREWALL:
+   <img width="774" height="334" alt="imagen" src="https://github.com/user-attachments/assets/d9116251-902e-4684-806d-292b709f79cc" />
+   R1:
+   <img width="729" height="213" alt="imagen" src="https://github.com/user-attachments/assets/3be3f397-ea54-4af9-ac23-f6dd73fe734e" />
+
+6. **Prueba de salida a Internet (`ping google.com`) tras aplicar hardening:**  
+   <img width="904" height="294" alt="imagen" src="https://github.com/user-attachments/assets/1154b62f-9017-41e2-b862-89b26ff3fd76" />
+
 
 ---
 
 ## 9. Running Configurations Completas
 
-### 9.1. Extracto de Configuración Final — `R1`
-```cisco
-! Pega aquí la salida completa de: show running-config en R1
-```
-
-### 9.2. Extracto de Configuración Final — `SW1`
-```cisco
-! Pega aquí la salida completa de: show running-config en SW1
-```
-
-### 9.3. Extracto de Configuración Final — `FortiGate` (`FW-CIS-20240886.conf`)
-```fortios
-# Pega aquí el contenido del archivo respaldado FW-CIS-20240886.conf
-```
-
----
+TODO ESTO ESTA SUBIDO AL RESPOSITORIO
 
 ## 10. Scripts y Archivos Utilizados
 
@@ -608,11 +603,7 @@ if __name__ == "__main__":
 
 ### 10.2. Reportes Generados (`reporte_auditoria_inicial.txt` y `reporte_postumo_hardening.txt`)
 
-```text
-# Pega aquí el contenido exacto de reporte_auditoria_inicial.txt y reporte_postumo_hardening.txt
-```
-
----
+ESTA PEGADO AL REPOSITORIO
 
 ## 11. Conclusión
 
