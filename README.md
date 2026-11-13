@@ -1,4 +1,4 @@
-*VIDEO:* https://youtu.be/GxC00WPr1DU
+# *VIDEO:* https://youtu.be/GxC00WPr1DU
 
 # Auditoría y Endurecimiento (Hardening) Automatizado Basado en CIS Benchmarks
 
