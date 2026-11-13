@@ -1,0 +1,125 @@
+Building configuration...
+
+Current configuration : 1653 bytes
+!
+! Last configuration change at 21:21:59 UTC Fri Nov 13 2026 by admin
+upgrade fpd auto
+version 15.3
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1-CIS-20240886
+!
+boot-start-marker
+boot-end-marker
+!
+aqm-register-fnf
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name cis-lab.local
+ip cef
+login block-for 120 attempts 3 within 60
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username admin privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+ip ssh version 2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description ENLACE-FIREWALL
+ ip address 172.16.10.2 255.255.255.252
+ duplex half
+!
+interface FastEthernet1/0
+ description LAN-GESTION
+ ip address 192.168.50.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+ip route 0.0.0.0 0.0.0.0 172.16.10.1
+!
+!
+no cdp log mismatch duplex
+no cdp run
+!
+!
+!
+control-plane
+!
+!
+mgcp behavior rsip-range tgcp-only
+mgcp behavior comedia-role none
+mgcp behavior comedia-check-media-src disable
+mgcp behavior comedia-sdp-force disable
+!
+mgcp profile default
+!
+!
+!
+gatekeeper
+ shutdown
+!
+banner motd ^C ACCESO RESTRINGIDO - SOLO PERSONAL AUTORIZADO (20240886) ^C
+!
+line con 0
+ exec-timeout 5 0
+ privilege level 15
+ logging synchronous
+ login local
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+end

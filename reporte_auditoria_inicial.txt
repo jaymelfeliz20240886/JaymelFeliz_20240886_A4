@@ -1,0 +1,29 @@
+
+==============================================================================
+INFORME DE CUMPLIMIENTO CIS BENCHMARK - AUDITORÍA INICIAL (DRY-RUN)
+Fecha y Hora: 2026-11-13 22:45:02 | Estación Auditora: 192.168.50.10
+==============================================================================
+RESUMEN EJECUTIVO: 3/18 Controles Aprobados (16.7% de Cumplimiento)
+Controles Fallidos Pendientes: 15
+------------------------------------------------------------------------------
+DISPOSITIVO  | ID CONTROL     | ESTADO     | DESCRIPCIÓN
+------------------------------------------------------------------------------
+R1           | CIS-IOS-1.1.1  | CUMPLE     | Cifrado de contraseñas en texto plano (service password-encryption)
+R1           | CIS-IOS-1.2.1  | NO CUMPLE  | SSH Versión 2 obligatorio (ip ssh version 2)
+R1           | CIS-IOS-1.2.5  | NO CUMPLE  | Bloqueo ante fuerza bruta (login block-for 120 attempts 3 within 60)
+R1           | CIS-IOS-1.3.1  | NO CUMPLE  | Banner de advertencia legal (banner motd)
+R1           | CIS-IOS-2.1.1  | NO CUMPLE  | Deshabilitar servidor HTTP inseguro (no ip http server)
+R1           | CIS-IOS-2.1.2  | NO CUMPLE  | Deshabilitar protocolo de descubrimiento CDP (no cdp run)
+R1           | CIS-IOS-1.2.3  | NO CUMPLE  | Transporte exclusivo SSH y timeout de 5 min en líneas VTY
+SW1          | CIS-IOS-1.1.1  | CUMPLE     | Cifrado de contraseñas en texto plano (service password-encryption)
+SW1          | CIS-IOS-1.2.1  | NO CUMPLE  | SSH Versión 2 obligatorio (ip ssh version 2)
+SW1          | CIS-IOS-1.2.5  | NO CUMPLE  | Bloqueo ante fuerza bruta (login block-for 120 attempts 3 within 60)
+SW1          | CIS-IOS-1.3.1  | NO CUMPLE  | Banner de advertencia legal (banner motd)
+SW1          | CIS-IOS-2.1.1  | NO CUMPLE  | Deshabilitar servidor HTTP inseguro (no ip http server)
+SW1          | CIS-IOS-2.1.2  | NO CUMPLE  | Deshabilitar protocolo de descubrimiento CDP (no cdp run)
+SW1          | CIS-IOS-1.2.3  | NO CUMPLE  | Transporte exclusivo SSH y timeout de 5 min en líneas VTY
+FortiGate    | CIS-FGT-2.1.1  | NO CUMPLE  | Tiempo de inactividad administrativo <= 5 min (admintimeout 5)
+FortiGate    | CIS-FGT-2.1.2  | NO CUMPLE  | Criptografía fuerte TLS/SSH habilitada (strong-crypto enable)
+FortiGate    | CIS-FGT-2.1.4  | NO CUMPLE  | Banner de advertencia previo al inicio de sesión (pre-login-banner)
+FortiGate    | CIS-FGT-2.2.1  | CUMPLE     | Eliminar gestión administrativa en texto plano (HTTP/Telnet en port1)
+==============================================================================

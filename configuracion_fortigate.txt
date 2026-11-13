@@ -1,0 +1,30 @@
+
+WARNING: File System Check Recommended! An unsafe reboot may have caused an inconsistency in the disk drive.
+It is strongly recommended that you check the file system consistency before proceeding.
+Please run 'execute disk list' and then 'execute disk scan <ref#>'.
+Note: The device will reboot and scan the disk during startup. This may take up to an hour.
+FW-CIS-20240886 # #config-version=FGVMK6-7.0.9-FW-build0444-221121:opmode=1:vdom=0:user=admin
+#conf_file_ver=284232345780454
+#buildno=0444
+#global_vdom=1
+config system global
+    set alias "FortiGate-VM64-KVM"
+    set hostname "FW-CIS-20240886"
+    set pre-login-banner enable
+    set timezone 04
+end
+config system accprofile
+    edit "prof_admin"
+        set secfabgrp read-write
+        set ftviewgrp read-write
+        set authgrp read-write
+        set sysgrp read-write
+        set netgrp read-write
+        set loggrp read-write
+        set fwgrp read-write
+        set vpngrp read-write
+        set utmgrp read-write
+        set wanoptgrp read-write
+        set wifi read-write
+    next
+end
