@@ -25,6 +25,7 @@
 ---
 
 ## 1. Propósito del Laboratorio
+<img width="816" height="747" alt="imagen" src="https://github.com/user-attachments/assets/1f5e0b2b-b045-479f-8991-917082ab75b1" />
 
 El objetivo de este laboratorio es diseñar, implementar y auditar de forma automatizada una arquitectura de red empresarial endurecida bajo las recomendaciones internacionales del **Center for Internet Security (CIS Benchmarks)** para sistemas **Cisco IOS** y **Fortinet FortiGate**.
 
@@ -39,8 +40,14 @@ Mediante el desarrollo de un motor de auditoría y remediación en **Python** co
 
 La infraestructura se segmenta en tres zonas funcionales:
 1. **Zona LAN / Gestión (`192.168.50.0/24`):** Compuesta por la estación de auditoría Linux (`PC`), el switch de distribución (`SW1`) y la interfaz interna del router perimetral (`R1`).
-2. **Zona de Tránsito / Enlace Punto a Punto (`172.16.10.0/30`):** Interconexión dedicada entre el router de borde (`R1`) y la interfaz interna (`port1`) del firewall perimetral (`FortiGate`).
-3. **Zona WAN / Salida Externa (`NAT1`):** Interfaz externa (`port2`) del firewall conectada al nodo `NAT1` de GNS3 mediante asignación dinámica DHCP y traducción de direcciones (SNAT).
+   <img width="546" height="433" alt="imagen" src="https://github.com/user-attachments/assets/4af30c20-82ba-4bc2-9c5d-5181b15f010b" />
+
+3. **Zona de Tránsito / Enlace Punto a Punto (`172.16.10.0/30`):** Interconexión dedicada entre el router de borde (`R1`) y la interfaz interna (`port1`) del firewall perimetral (`FortiGate`).
+   <img width="516" height="220" alt="imagen" src="https://github.com/user-attachments/assets/ecf7ea73-7f48-4b4f-bc0a-2fb1750cfd50" />
+
+5. **Zona WAN / Salida Externa (`NAT1`):** Interfaz externa (`port2`) del firewall conectada al nodo `NAT1` de GNS3 mediante asignación dinámica DHCP y traducción de direcciones (SNAT).
+   <img width="598" height="454" alt="imagen" src="https://github.com/user-attachments/assets/81674283-f690-41d2-92df-64dd4ff406fb" />
+
 
 ```text
                        [ Nube NAT1 (Internet) ]
